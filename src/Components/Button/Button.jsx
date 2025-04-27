@@ -1,8 +1,11 @@
-const Button = ({ text, onClick }) => {
+const Button = ({ text, onClick, className }) => {
   return (
     <button
       onClick={onClick}
-      class="rounded-[10px] bg-blue-500 transition delay-20 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 "
+      className={
+        className ||
+        "w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200"
+      }
     >
       {text}
     </button>
