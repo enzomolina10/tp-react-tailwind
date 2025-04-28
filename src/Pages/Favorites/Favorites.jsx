@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../../Components/Button/Button";
 import { Navigate, useNavigate } from "react-router";
+import Header from "../../Components/Header/Header";
 
 const Favorites = () => {
   const navegate = useNavigate();
@@ -8,7 +9,8 @@ const Favorites = () => {
     navegate("/");
   };
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+    <div>
+      <Header />
       <h1> Esta es la pagina de Favorites</h1>
       <Button text={"Volver a Home"} onClick={navegaAHome} />
     </div>

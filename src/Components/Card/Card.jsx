@@ -1,9 +1,9 @@
 import Button from "../Button/Button";
 
-const Card = ({ text, onClick }) => {
+const Card = ({ text }) => {
   const handleAddToFavorites = () => {
     // Aquí iría la lógica para añadir a favoritos
-    console.log("Añadido a favoritos:", text.substring(0, 20) + "...");
+    console.log("############Añadido a favoritos@@@@@@@@@@@@");
   };
 
   return (
@@ -16,7 +16,7 @@ const Card = ({ text, onClick }) => {
           </div>
         </div>
         <div className="flex justify-end gap-4">
-          <Button 
+          <Button
             text={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
