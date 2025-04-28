@@ -59,17 +59,17 @@ const Header = () => {
             <Button
               onClick={navegaAHome}
               text={<span>Inicio</span>}
-              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200"
+              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 hover:underline"
             />
             <Button
               onClick={navegaAFavorites}
               text={<span>Favoritos</span>}
-              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200"
+              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 hover:underline"
             />
             <Button
               onClick={navegaADetails}
               text={<span>Autores</span>}
-              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200"
+              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 hover:underline"
             />
             <div className="flex items-center cursor-pointer select-none px-4 py-2 ml-4 rounded-xl bg-white border border-blue-300 shadow-md hover:bg-blue-50 transition-colors duration-200">
               {/* loguito del mundo */}

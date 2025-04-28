@@ -4,6 +4,7 @@ import {  useEffect } from "react";
 import Button from "../../Components/Button/Button";
 import Card from "../../Components/Card/Card";
 import Header from "../../Components/Header/Header";
+import Footer from "../../Components/Footer/Footer";
 
 function Home() {
   const Autor = () => {
@@ -36,7 +37,7 @@ function Home() {
   return (
     <div>
       <Header />
-      {/* <div className="probarStickyHeader">
+       <div className="probarStickyHeader">
         <br />
         <p>hola</p>
         <br />
@@ -167,7 +168,8 @@ function Home() {
         <br />
         <br /><p>hola</p><br />
         <br />
-      </div> */}
+      </div> 
+      <Footer/>
     </div>
   );
 }
