@@ -1,5 +1,6 @@
 import React from "react";
-import {  useEffect } from "react";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 import Button from "../../Components/Button/Button";
 import Card from "../../Components/Card/Card";
@@ -34,10 +35,12 @@ function Home() {
     }, []);
   };
 
+  const { t } = useTranslation();
+
   return (
     <div>
       <Header />
-       <div className="probarStickyHeader">
+      <div className="probarStickyHeader">
         <br />
         <p>hola</p>
         <br />
@@ -166,10 +169,12 @@ function Home() {
         <br />
         <p>hola</p>
         <br />
-        <br /><p>hola</p><br />
         <br />
-      </div> 
-      <Footer/>
+        <p>hola</p>
+        <br />
+        <br />
+      </div>
+      <Footer />
     </div>
   );
 }

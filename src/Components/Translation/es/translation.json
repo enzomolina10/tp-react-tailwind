@@ -1,0 +1,24 @@
+{
+  "header": {
+    "name": "Cuentos Cortos",
+    "start": "Inicio",
+    "favorites": "Favoritos",
+    "authors": "Autores"
+  },
+  "footer": {
+    "contact": "Contacto",
+    "phone": "Teléfono",
+    "aboutTitle": "Sobre la Página",
+    "aboutText1": "Esta página tiene la finalidad de mostrar cuentos cortos de famosos autores inventados, con cuentos inventados.",
+    "aboutText2": "Para público inventado.",
+    "title": "Preguntas Frecuentes",
+    "question1": "¿Qué tipos de cuentos hay?",
+    "answer1": "Todo tipo de cuento que se pueda inventar.",
+    "question2": "¿Se puede agregar cuentos?",
+    "answer2": "Próximamente, la única restricción es que tienen que ser inventados.",
+    "copyright": "© 2025 Grupo 7. Todos los derechos reservados.",
+    "follow": "Seguinos en ",
+    "and": " y ",
+    "comeBack": "Volver al Home"
+  }
+}

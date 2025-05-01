@@ -1,39 +1,41 @@
+import { useTranslation } from "react-i18next";
+
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-6">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-start space-y-6 md:space-y-0">
         <section className="flex-1 text-center px-4">
-          <h2 className="text-lg font-bold">Contacto</h2>
+          <h2 className="text-lg font-bold">{t("footer.contact")}</h2>
           <p>Email: contacto@grupo7.com</p>
-          <p>Teléfono: +54 299 456 789</p>
+          <p>{t("phone")}: +54 299 456 789</p>
         </section>
         <section className="flex-1 text-center px-4">
-          <h2 className="text-lg font-bold">Sobre la Página</h2>
+          <h2 className="text-lg font-bold">{t("footer.aboutTitle")}</h2>
           <p>
-            Esta página tiene la finalidad de mostrar cuentos cortos de famosos
-            autores inventados, con cuentos inventados.
+            {t("footer.aboutText1")}
             <br />
-            Para publico inventado.
+            {t("footer.aboutText2")}
           </p>
         </section>
         <section className="flex-1 text-center px-4">
-          <h2 className="text-lg font-bold">Preguntas Frecuentes</h2>
+          <h2 className="text-lg font-bold">{t("footer.title")}</h2>
           <p>
-            <strong>¿Qué tipos de cuentos hay?</strong> <br />
-            Todo tipo de cuento que se pueda inventar.
+            <strong>{t("footer.question1")}</strong> <br />
+            {t("footer.answer1")}
           </p>
           <p>
-            <strong>¿Se puede agregar cuentos?</strong> <br />
-            Proximamente, la unica restriccion es que tienen que ser inventados.
+            <strong>{t("footer.question2")}</strong> <br />
+            {t("footer.answer2")}
           </p>
         </section>
       </div>
       <div className="container mx-auto text-center mt-6 scale-110">
         <p className="text-lg">
-          &copy; 2025 Grupo 7. Todos los derechos reservados.
+        {t("footer.copyright")}
         </p>
         <p className="text-lg">
-          Seguinos en{" "}
+          {t("footer.follow")}{" "}
           <a
             href="https://www.facebook.com/"
             className="text-blue-100 hover:underline inline-flex items-center"
@@ -50,7 +52,7 @@ const Footer = () => {
             </svg>
             Facebook
           </a>{" "}
-          y{" "}  
+          {t("footer.and")}{" "}
           <a
             href="https://github.com/enzomolina10/tp-react-tailwind"
             target="_blank"

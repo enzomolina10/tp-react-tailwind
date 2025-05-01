@@ -1,0 +1,24 @@
+{
+  "header": {
+    "name": "Short Stories",
+    "start": "Start",
+    "favorites": "Favorites",
+    "authors": "Authors"
+  },
+  "footer": {
+    "contact": "Contact",
+    "phone": "Phone",
+    "aboutTitle": "Abuout the Page",
+    "aboutText1": "This page is intended to showcase short stories from fictional famous authors, with made-up stories.",
+    "aboutText2": "For fictional audiences.",
+    "title": "Frequently Asked Questions",
+    "question1": "What kinds of stories are there?",
+    "answer1": "Any kind of story that can be invented.",
+    "question2": "Can stories be added?",
+    "answer2": "Coming soon, the only restriction is they must be fictional.",
+    "copyright": "© 2025 Group 7. All rights reserved.",
+    "follow": "Follow us on ",
+    "and": " and ",
+    "comeBack": "Come back Home"
+  }
+}
