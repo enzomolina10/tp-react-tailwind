@@ -9,7 +9,7 @@
   "footer": {
     "contact": "Contact",
     "phone": "Phone",
-    "aboutTitle": "Abuout the Page",
+    "aboutTitle": "About the Page",
     "aboutText1": "This page is intended to showcase short stories from fictional famous authors, with made-up stories.",
     "aboutText2": "For fictional audiences.",
     "title": "Frequently Asked Questions",
@@ -22,11 +22,17 @@
     "and": " and ",
     "comeBack": "Come back Home"
   },
-  "home":{
+  "home": {
     "empty": "There are no stories available."
   },
-  "card":{
+  "card": {
     "author": "Author details",
     "favorite": "Favorite"
+  },
+  "details": {
+    "title": "Author Details",
+    "biography": "Biography",
+    "age": "Age",
+    "nationality": "Nationality"
   }
 }

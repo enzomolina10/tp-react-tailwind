@@ -61,7 +61,6 @@ function Home() {
       }
       const autorData = await response.json();
       console.log("Detalles del autor:", autorData);
-      // navegación a la página de detalles
     } catch (err) {
       console.error("Error al obtener detalles del autor:", err);
     }

@@ -28,5 +28,11 @@
   "card":{
     "author": "Detalles del autor",
     "favorite": "Favorito"
+  },
+  "details":{
+    "title": "Detalles del Autor",
+    "biography": "Biografía",
+    "age": "Edad",
+    "nationality": "Nacionalidad"
   }
 }
