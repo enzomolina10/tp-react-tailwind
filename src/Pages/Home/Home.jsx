@@ -53,6 +53,37 @@ function Home() {
     }
   };
 
+   const [cuentosFavoritos, setCuentosFavoritos] = useState([]);
+
+   // Cargar cuentos desde LocalStorage - pruebas de rodri hasta return
+   useEffect(() => {
+     const cuentosGuardados = localStorage.getItem("cuentosFavoritos");
+     if (cuentosGuardados) {
+       setCuentosFavoritos(JSON.parse(cuentosGuardados));
+     }
+   }, []);
+
+   const agregarCuentoFavorito = (cuentoFavSeleccionado) => {
+     const yaExiste = cuentosFavoritos.some(
+       (cuento) => cuento.id === cuentoFavSeleccionado.id
+     );
+
+     if (!yaExiste) {
+       const nuevosFavoritos = [...cuentosFavoritos, cuentoFavSeleccionado];
+       setCuentosFavoritos(nuevosFavoritos);
+       localStorage.setItem(
+         "cuentosFavoritos",
+         JSON.stringify(nuevosFavoritos)
+       );
+
+       // para verificar que se cuardo
+       console.log("Cuento agregado a favoritos:", cuentoFavSeleccionado);
+       console.log("Nuevo array en localStorage:", nuevosFavoritos);
+     } else {
+       console.log("El cuento ya estaba en favoritos:", cuentoFavSeleccionado);
+     }
+   };
+
   return (
     <div className="bg-amber-50 min-h-screen">
       <Header />
@@ -84,12 +115,52 @@ function Home() {
         <div className="space-y-6">
           {cuentos.map((cuento) => (
             <Card
-              key={cuento.idCuento}//el prop key evita el warning de react por el dom
+              key={cuento.idCuento} //el prop key evita el warning de react por el dom
               title={cuento.titulo}
               text={cuento.cuento}
             />
           ))}
         </div>
+      </div>
+      {/* pruebas de rodri*/}
+      <div className="probarStickyHeader">
+        <br />
+        <p>hola</p>
+        <Button
+          onClick={() =>
+            agregarCuentoFavorito({
+              id: 1,
+              nombre: "Tutancamon",
+              autor: "Ramon",
+            })
+          }
+          text="Agregar a Fav"
+        />
+        <br />
+        <br />
+        <p>hola</p>
+        <Button
+          onClick={() =>
+            agregarCuentoFavorito({
+              id: 2,
+              nombre: "Transofmers",
+              autor: "Eldiablo",
+            })
+          }
+          text="Agregar a Fav"
+        />
+        <br />
+        <p>hola</p>
+        <Button
+          onClick={() =>
+            agregarCuentoFavorito({
+              id: 3,
+              nombre: "Fast y furioso",
+              autor: "La familia",
+            })
+          }
+          text="Agregar a Fav"
+        />
       </div>
       <Footer />
     </div>
