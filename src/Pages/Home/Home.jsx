@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -37,17 +37,76 @@ function Home() {
 
   const { t } = useTranslation();
 
+
+  const [cuentosFavoritos,setCuentosFavoritos]=useState([]);
+
+  // Cargar cuentos desde LocalStorage
+  useEffect(() => {
+    const cuentosGuardados = localStorage.getItem("cuentosFavoritos");
+    if (cuentosGuardados) {
+      setCuentosFavoritos(JSON.parse(cuentosGuardados));
+    } 
+  }, []);
+
+  const agregarCuentoFavorito = (cuentoFavSeleccionado) => {
+    const yaExiste = cuentosFavoritos.some(
+      (cuento) => cuento.id === cuentoFavSeleccionado.id
+    );
+  
+    if (!yaExiste) {
+      const nuevosFavoritos = [...cuentosFavoritos, cuentoFavSeleccionado];
+      setCuentosFavoritos(nuevosFavoritos);
+      localStorage.setItem("cuentosFavoritos", JSON.stringify(nuevosFavoritos));
+  
+      // para verificar que se cuardo
+      console.log("Cuento agregado a favoritos:", cuentoFavSeleccionado);
+      console.log("Nuevo array en localStorage:", nuevosFavoritos);
+    } else {
+      console.log("El cuento ya estaba en favoritos:", cuentoFavSeleccionado);
+    }
+  };
+
   return (
     <div>
       <Header />
       <div className="probarStickyHeader">
         <br />
         <p>hola</p>
+        <Button
+          onClick={() =>
+            agregarCuentoFavorito({
+              id: 1,
+              nombre: "Tutancamon",
+              autor: "Ramon",
+            })
+          }
+          text="Agregar a Fav"
+        />
         <br />
         <br />
         <p>hola</p>
+        <Button
+          onClick={() =>
+            agregarCuentoFavorito({
+              id: 2,
+              nombre: "Transofmers",
+              autor: "Eldiablo",
+            })
+          }
+          text="Agregar a Fav"
+        />
         <br />
         <p>hola</p>
+        <Button
+          onClick={() =>
+            agregarCuentoFavorito({
+              id: 3,
+              nombre: "Fast y furioso",
+              autor: "La familia",
+            })
+          }
+          text="Agregar a Fav"
+        />
         <br />
         <br />
         <p>hola</p>
