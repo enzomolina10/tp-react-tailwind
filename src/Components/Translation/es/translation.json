@@ -3,7 +3,8 @@
     "name": "Cuentos Cortos",
     "home": "Inicio",
     "favorites": "Favoritos",
-    "authors": "Autores"
+    "authors": "Autores",
+    "search": "Buscar cuento"
   },
   "footer": {
     "contact": "Contacto",
@@ -20,5 +21,12 @@
     "follow": "Seguinos en ",
     "and": " y ",
     "comeBack": "Volver al Home"
+  },
+  "home":{
+    "empty": "No hay cuentos disponibles."
+  },
+  "card":{
+    "author": "Detalles del autor",
+    "favorite": "Favorito"
   }
 }

@@ -3,7 +3,8 @@
     "name": "Short Stories",
     "home": "Home",
     "favorites": "Favorites",
-    "authors": "Authors"
+    "authors": "Authors",
+    "search": "Search story"
   },
   "footer": {
     "contact": "Contact",
@@ -20,5 +21,12 @@
     "follow": "Follow us on ",
     "and": " and ",
     "comeBack": "Come back Home"
+  },
+  "home":{
+    "empty": "There are no stories available."
+  },
+  "card":{
+    "author": "Author details",
+    "favorite": "Favorite"
   }
 }

@@ -5,12 +5,26 @@ import Button from "../../Components/Button/Button";
 import Card from "../../Components/Card/Card";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
+import Input from "../../Components/Input/Input";
 
 function Home() {
   const { t } = useTranslation();
   const [cuentos, setCuentos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [busqueda, setBusqueda] = useState("");
+
+  const quitarAcentos = (text) => {
+    return text
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  };
+
+  const cuentosFiltrados = cuentos.filter((cuento) =>
+    // cuento.titulo.toLowerCase().includes(busqueda.toLowerCase())
+    quitarAcentos(cuento.titulo).includes(quitarAcentos(busqueda))
+  );
 
   useEffect(() => {
     const obtenerCuentos = async () => {
@@ -53,44 +67,40 @@ function Home() {
     }
   };
 
-   const [cuentosFavoritos, setCuentosFavoritos] = useState([]);
+  const [cuentosFavoritos, setCuentosFavoritos] = useState([]);
 
-   // Cargar cuentos desde LocalStorage - pruebas de rodri hasta return
-   useEffect(() => {
-     const cuentosGuardados = localStorage.getItem("cuentosFavoritos");
-     if (cuentosGuardados) {
-       setCuentosFavoritos(JSON.parse(cuentosGuardados));
-     }
-   }, []);
+  // Cargar cuentos desde LocalStorage - pruebas de rodri hasta return
+  useEffect(() => {
+    const cuentosGuardados = localStorage.getItem("cuentosFavoritos");
+    if (cuentosGuardados) {
+      setCuentosFavoritos(JSON.parse(cuentosGuardados));
+    }
+  }, []);
 
-   const agregarCuentoFavorito = (cuentoFavSeleccionado) => {
-     const yaExiste = cuentosFavoritos.some(
-       (cuento) => cuento.id === cuentoFavSeleccionado.id
-     );
+  const agregarCuentoFavorito = (cuentoFavSeleccionado) => {
+    const yaExiste = cuentosFavoritos.some(
+      (cuento) => cuento.id === cuentoFavSeleccionado.id
+    );
 
-     if (!yaExiste) {
-       const nuevosFavoritos = [...cuentosFavoritos, cuentoFavSeleccionado];
-       setCuentosFavoritos(nuevosFavoritos);
-       localStorage.setItem(
-         "cuentosFavoritos",
-         JSON.stringify(nuevosFavoritos)
-       );
+    if (!yaExiste) {
+      const nuevosFavoritos = [...cuentosFavoritos, cuentoFavSeleccionado];
+      setCuentosFavoritos(nuevosFavoritos);
+      localStorage.setItem("cuentosFavoritos", JSON.stringify(nuevosFavoritos));
 
-       // para verificar que se cuardo
-       console.log("Cuento agregado a favoritos:", cuentoFavSeleccionado);
-       console.log("Nuevo array en localStorage:", nuevosFavoritos);
-     } else {
-       console.log("El cuento ya estaba en favoritos:", cuentoFavSeleccionado);
-     }
-   };
+      // para verificar que se cuardo
+      console.log("Cuento agregado a favoritos:", cuentoFavSeleccionado);
+      console.log("Nuevo array en localStorage:", nuevosFavoritos);
+    } else {
+      console.log("El cuento ya estaba en favoritos:", cuentoFavSeleccionado);
+    }
+  };
 
   return (
     <div className="bg-amber-50 min-h-screen">
       <Header />
-
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-2">
         <h1 className="text-3xl font-bold text-center text-blue-700 mb-8"></h1>
-
+        <Input onChange={(e) => setBusqueda(e.target.value)} />
         {loading && (
           <div className="flex justify-center items-center py-10">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
@@ -108,12 +118,12 @@ function Home() {
 
         {!loading && !error && cuentos.length === 0 && (
           <div className="text-center py-10">
-            <p className="text-3xl text-red-600">No hay cuentos disponibles.</p>
+            <p className="text-3xl text-red-600">{t("home.empty")}</p>
           </div>
         )}
 
         <div className="space-y-6">
-          {cuentos.map((cuento) => (
+          {cuentosFiltrados.map((cuento) => (
             <Card
               key={cuento.idCuento} //el prop key evita el warning de react por el dom
               title={cuento.titulo}
