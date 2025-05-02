@@ -1,7 +1,7 @@
 {
   "header": {
     "name": "Cuentos Cortos",
-    "start": "Inicio",
+    "home": "Inicio",
     "favorites": "Favoritos",
     "authors": "Autores"
   },

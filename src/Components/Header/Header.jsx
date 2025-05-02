@@ -65,7 +65,7 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8 items-center">
             <Button
               onClick={navegaAHome}
-              text={<span>{t("header.start")}</span>}
+              text={<span>{t("header.home")}</span>}
               className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 hover:underline"
             />
             <Button
@@ -103,7 +103,7 @@ const Header = () => {
               <span className="text-blue-700 font-bold text-base uppercase">
                 {i18n.language === "es" ? "ES" : "EN"}
               </span>
-              <svg
+             {/*  <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 text-blue-400 ml-2"
                 fill="none"
@@ -116,7 +116,7 @@ const Header = () => {
                   strokeWidth={2}
                   d="M7 7l3-3 3 3m0 6l-3 3-3-3"
                 />
-              </svg>
+              </svg> */}
             </div>
           </nav>
         </div>
