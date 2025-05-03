@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
+
 import Button from "../../Components/Button/Button";
 import Card from "../../Components/Card/Card";
 import Header from "../../Components/Header/Header";
@@ -68,17 +69,30 @@ function Home() {
 
   const [cuentosFavoritos, setCuentosFavoritos] = useState([]);
 
-  // Cargar cuentos desde LocalStorage - pruebas de rodri hasta return
   useEffect(() => {
-    const cuentosGuardados = localStorage.getItem("cuentosFavoritos");
-    if (cuentosGuardados) {
-      setCuentosFavoritos(JSON.parse(cuentosGuardados));
+    const favoritosEnStorage = localStorage.getItem("cuentosFavoritos");
+  
+    if (favoritosEnStorage) {
+      try {
+        const favoritosParseados = JSON.parse(favoritosEnStorage);
+  
+        const favoritosValidos = favoritosParseados.filter((cuento) =>
+          cuento &&
+          typeof cuento === "object" &&
+          cuento.idCuento // aseguramos que tenga un id válido
+        );
+  
+        setCuentosFavoritos(favoritosValidos);
+      } catch (error) {
+        console.error("Error al parsear los cuentos favoritos desde localStorage:", error);
+        setCuentosFavoritos([]); // por seguridad, dejarlo vacío si hay error
+      }
     }
   }, []);
-
+  
   const agregarCuentoFavorito = (cuentoFavSeleccionado) => {
     const yaExiste = cuentosFavoritos.some(
-      (cuento) => cuento.id === cuentoFavSeleccionado.id
+      (cuento) => cuento.idCuento === cuentoFavSeleccionado.idCuento
     );
 
     if (!yaExiste) {
@@ -87,10 +101,10 @@ function Home() {
       localStorage.setItem("cuentosFavoritos", JSON.stringify(nuevosFavoritos));
 
       // para verificar que se cuardo
-      console.log("Cuento agregado a favoritos:", cuentoFavSeleccionado);
-      console.log("Nuevo array en localStorage:", nuevosFavoritos);
+      console.log("Cuento agregado a favoritos:");
+      console.log("Nuevo array en localStorage:");
     } else {
-      console.log("El cuento ya estaba en favoritos:", cuentoFavSeleccionado);
+      console.log("El cuento ya estaba en favoritos:");
     }
   };
 
@@ -121,55 +135,19 @@ function Home() {
           </div>
         )}
 
-        <div className="space-y-6">
-          {cuentosFiltrados.map((cuento) => (
-            <Card
-              key={cuento.idCuento} //el prop key evita el warning de react por el dom
-              title={cuento.titulo}
-              text={cuento.cuento}
-            />
-          ))}
-        </div>
+      <div className="space-y-6">
+        {cuentosFiltrados.map((cuento) => (
+          <Card
+            key={cuento.idCuento}
+            title={cuento.titulo}
+            text={cuento.cuento}
+            onClick={() => agregarCuentoFavorito(cuento)}
+            translation1="card.favorite"
+            translation2="card.author"
+          />
+        ))}
       </div>
-      {/* pruebas de rodri*/}
-      <div className="probarStickyHeader">
-        <br />
-        <p>hola</p>
-        <Button
-          onClick={() =>
-            agregarCuentoFavorito({
-              id: 1,
-              nombre: "Tutancamon",
-              autor: "Ramon",
-            })
-          }
-          text="Agregar a Fav"
-        />
-        <br />
-        <br />
-        <p>hola</p>
-        <Button
-          onClick={() =>
-            agregarCuentoFavorito({
-              id: 2,
-              nombre: "Transofmers",
-              autor: "Eldiablo",
-            })
-          }
-          text="Agregar a Fav"
-        />
-        <br />
-        <p>hola</p>
-        <Button
-          onClick={() =>
-            agregarCuentoFavorito({
-              id: 3,
-              nombre: "Fast y furioso",
-              autor: "La familia",
-            })
-          }
-          text="Agregar a Fav"
-        />
+
       </div>
       <Footer />
     </div>

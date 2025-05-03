@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import { useTranslation } from "react-i18next";
+import Card from "../../Components/Card/Card";
 
 const Favorites = () => {
   const { t } = useTranslation();
@@ -21,23 +22,49 @@ const Favorites = () => {
     }
   }, []);
 
+
+  const eliminarFavorito = (favorito) => {
+    const nuevosFavoritos = cuentosFavoritos.filter(
+      (cuento) => cuento.idCuento !== favorito.idCuento 
+    );
+    setCuentosFavoritos(nuevosFavoritos);
+    localStorage.setItem("cuentosFavoritos", JSON.stringify(nuevosFavoritos));
+  };
+
+  const mostrarFavoritos = () => {
+    return (
+      <div>
+        {cuentosFavoritos.length > 0 ? (
+          cuentosFavoritos.map((cuento) => (
+            <Card
+              key={cuento.idCuento}
+              title={cuento.titulo}
+              text={cuento.cuento}
+              translation1="card.eliminate"
+              translation2="card.author"
+              onClick={() => eliminarFavorito(cuento)}
+            />
+          ))
+        ) : (
+          <h1>NO HAY FAVORITOS</h1>
+        )}
+      </div>
+    );
+  };
+  
+  
+  
+  
   return (
     <div>
       <Header />
       <h1>Esta es la página de Favorites</h1>
 
-      {cuentosFavoritos.length === 0 ? (
-        <p>No hay cuentos en favoritos.</p>
-      ) : (
-        <div>
-          {cuentosFavoritos.map((cuento) => (
-            <div key={cuento.id} style={{ border: "1px solid #ccc", margin: "10px", padding: "10px" }}>
-              <h3>{cuento.nombre}</h3>
-              <p>{cuento.autor}</p>
-            </div>
-          ))}
-        </div>
-      )}
+      <div className="space-y-6">
+       {mostrarFavoritos()}
+      </div>
+
+
       <Button
         text="Limpiar favoritos"
         onClick={() => {

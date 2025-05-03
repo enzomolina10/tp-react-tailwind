@@ -27,7 +27,8 @@
   },
   "card":{
     "author": "Detalles del autor",
-    "favorite": "Favorito"
+    "favorite": "Favorito",
+    "eliminate": "Eliminar"
   },
   "details":{
     "title": "Detalles del Autor",

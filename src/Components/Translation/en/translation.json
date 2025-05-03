@@ -27,7 +27,8 @@
   },
   "card": {
     "author": "Author details",
-    "favorite": "Favorite"
+    "favorite": "Favorite",
+    "eliminate": "Eliminate"
   },
   "details": {
     "title": "Author Details",
