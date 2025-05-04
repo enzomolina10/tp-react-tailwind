@@ -8,6 +8,7 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import Input from "../../Components/Input/Input";
 import NotificacionAlert from "../../Components/NotificacionAlert/NotificacionAlert";
+import Cards from "../../Components/Card/Cards";
 
 function Home() {
   const navigate = useNavigate();
@@ -161,28 +162,12 @@ function Home() {
           </div>
         )}
 
-        <div className="space-y-6">
-          {cuentosFiltrados
-            .filter(
-              (cuento) =>
-                cuento.idCuento &&
-                cuento.idAutor &&
-                cuento.titulo &&
-                cuento.cuento
-            )
-            .map((cuento) => (
-              <Card
-                key={cuento.idCuento}
-                title={cuento.titulo}
-                text={cuento.cuento}
-                onClickFav={() => agregarCuentoFavorito(cuento)}
-                onDetails={() => handleDetallesAutor(cuento.idAutor)}
-                translation1="card.favorite"
-                translation2="card.author"
-              />
-            ))}
-        </div>
-      </div>
+      <Cards
+        cuentosFiltrados={cuentosFiltrados}
+        agregarCuentoFavorito={agregarCuentoFavorito}
+        handleDetallesAutor={handleDetallesAutor}
+      />
+            </div>
       <Footer />
     </div>
   );
