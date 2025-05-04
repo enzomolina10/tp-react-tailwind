@@ -34,6 +34,9 @@
     "title": "Author Details",
     "biography": "Biography",
     "age": "Age",
-    "nationality": "Nationality"
+    "nationality": "Nationality",
+    "noBiography": "No biography available",
+    "noAge": "No age available",
+    "noNationality" : "No Nationality available"
   }
 }

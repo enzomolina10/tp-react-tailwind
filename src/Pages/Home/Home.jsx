@@ -1,19 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-
+import { useNavigate } from "react-router-dom";
 
 import Button from "../../Components/Button/Button";
 import Card from "../../Components/Card/Card";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import Input from "../../Components/Input/Input";
+import NotificacionAlert from "../../Components/NotificacionAlert/NotificacionAlert";
 
 function Home() {
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const [cuentos, setCuentos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [busqueda, setBusqueda] = useState("");
+  const [notificacion, setNotificacion] = useState({
+    visible: false,
+    mensaje: "",
+    tipo: "info",
+  });
 
   const quitarAcentos = (text) => {
     return text
@@ -52,16 +59,16 @@ function Home() {
     obtenerCuentos();
   }, []);
 
-  const handleDetallesAutor = async (autorId) => {
+  const handleDetallesAutor = async (Id) => {
     try {
       const response = await fetch(
-        `https://680e8d0167c5abddd192719b.mockapi.io/api/v1/autor/${autorId}`
+        `https://680e8d0167c5abddd192719b.mockapi.io/api/v1/autor/${Id}`
       );
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
       }
       const autorData = await response.json();
-      console.log("Detalles del autor:", autorData);
+      navigate(`/details/${Id}`, { state: { autor: autorData } });
     } catch (err) {
       console.error("Error al obtener detalles del autor:", err);
     }
@@ -71,25 +78,26 @@ function Home() {
 
   useEffect(() => {
     const favoritosEnStorage = localStorage.getItem("cuentosFavoritos");
-  
+
     if (favoritosEnStorage) {
       try {
         const favoritosParseados = JSON.parse(favoritosEnStorage);
-  
-        const favoritosValidos = favoritosParseados.filter((cuento) =>
-          cuento &&
-          typeof cuento === "object" &&
-          cuento.idCuento // aseguramos que tenga un id válido
+
+        const favoritosValidos = favoritosParseados.filter(
+          (cuento) => cuento && typeof cuento === "object" && cuento.idCuento // aseguramos que tenga un id válido
         );
-  
+
         setCuentosFavoritos(favoritosValidos);
       } catch (error) {
-        console.error("Error al parsear los cuentos favoritos desde localStorage:", error);
+        console.error(
+          "Error al parsear los cuentos favoritos desde localStorage:",
+          error
+        );
         setCuentosFavoritos([]); // por seguridad, dejarlo vacío si hay error
       }
     }
   }, []);
-  
+
   const agregarCuentoFavorito = (cuentoFavSeleccionado) => {
     const yaExiste = cuentosFavoritos.some(
       (cuento) => cuento.idCuento === cuentoFavSeleccionado.idCuento
@@ -99,19 +107,30 @@ function Home() {
       const nuevosFavoritos = [...cuentosFavoritos, cuentoFavSeleccionado];
       setCuentosFavoritos(nuevosFavoritos);
       localStorage.setItem("cuentosFavoritos", JSON.stringify(nuevosFavoritos));
-
-      // para verificar que se cuardo
-      console.log("Cuento agregado a favoritos:");
-      console.log("Nuevo array en localStorage:");
+      setNotificacion({
+        visible: true,
+        mensaje: "¡Cuento agregado a favoritos!",
+        tipo: "exito",
+      });
     } else {
-      console.log("El cuento ya estaba en favoritos:");
+      setNotificacion({
+        visible: true,
+        mensaje: "El cuento ya estaba en favoritos.",
+        tipo: "advertencia",
+      });
     }
   };
 
   return (
-    <div className="bg-amber-50 min-h-screen">
+    <div className="bg-amber-50 min-h-screen flex flex-col">
+      <NotificacionAlert
+        mensaje={notificacion.mensaje}
+        tipo={notificacion.tipo}
+        visible={notificacion.visible}
+        onClose={() => setNotificacion({ ...notificacion, visible: false })}
+      />
       <Header />
-      <div className="container mx-auto px-4 py-2">
+      <div className="container mx-auto px-4 py-2 flex-grow">
         <h1 className="text-3xl font-bold text-center text-blue-700 mb-8"></h1>
         <Input onChange={(e) => setBusqueda(e.target.value)} />
         {loading && (
@@ -135,19 +154,27 @@ function Home() {
           </div>
         )}
 
-      <div className="space-y-6">
-        {cuentosFiltrados.map((cuento) => (
-          <Card
-            key={cuento.idCuento}
-            title={cuento.titulo}
-            text={cuento.cuento}
-            onClick={() => agregarCuentoFavorito(cuento)}
-            translation1="card.favorite"
-            translation2="card.author"
-          />
-        ))}
-      </div>
-
+        <div className="space-y-6">
+          {cuentosFiltrados
+            .filter(
+              (cuento) =>
+                cuento.idCuento &&
+                cuento.idAutor &&
+                cuento.titulo &&
+                cuento.cuento
+            )
+            .map((cuento) => (
+              <Card
+                key={cuento.idCuento}
+                title={cuento.titulo}
+                text={cuento.cuento}
+                onClickFav={() => agregarCuentoFavorito(cuento)}
+                onDetails={() => handleDetallesAutor(cuento.idAutor)}
+                translation1="card.favorite"
+                translation2="card.author"
+              />
+            ))}
+        </div>
       </div>
       <Footer />
     </div>

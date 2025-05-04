@@ -30,7 +30,7 @@ const Details = () => {
           );
         }
         const autoresParsed = await autoresRes.json();
-        setAutores(autoresParsed); 
+        setAutores(autoresParsed);
         console.log("Autores obtenidos:", autoresParsed);
       } catch (err) {
         console.error("Error al obtener datos de los autores:", err);
@@ -48,17 +48,17 @@ const Details = () => {
       <>
         <p className="mb-3">
           <span className="font-bold">{t("details.biography")}: </span>
-          {autor.biografia || "Sin biografía disponible"}
+          {autor.biografia || t("details.noBiography")}
         </p>
 
         <p className="mb-3">
           <span className="font-bold">{t("details.age")}: </span>
-          {autor.edad || "Desconocida"}
+          {autor.edad || t("details.noAge")}
         </p>
 
         <p className="mb-3">
           <span className="font-bold">{t("details.nationality")}: </span>
-          {autor.nacionalidad || "Desconocida"}
+          {autor.nacionalidad || t("details.noNationality")}
         </p>
       </>
     );
@@ -98,11 +98,11 @@ const Details = () => {
                   title={
                     `${autor.nombreAutor || ""} ${
                       autor.apellidoAutor || ""
-                    }`.trim() || "Nombre del Autor"
+                    }`.trim() || "Autor desconocido"
                   }
                   text={formatearAutorTextNegrita(autor)}
                   className="mb-8 h-full"
-                  hideButtons={true} 
+                  hideButtons={true}
                 />
               </div>
             ))}

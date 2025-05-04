@@ -31,9 +31,7 @@ const Footer = () => {
         </section>
       </div>
       <div className="container mx-auto text-center mt-6 scale-110">
-        <p className="text-lg">
-        {t("footer.copyright")}
-        </p>
+        <p className="text-lg">{t("footer.copyright")}</p>
         <p className="text-lg">
           {t("footer.follow")}{" "}
           <a

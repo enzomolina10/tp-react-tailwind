@@ -1,27 +1,23 @@
 import Button from "../Button/Button";
 import { useTranslation } from "react-i18next";
 
-
-const Card = ({ title, text, className, onClick, onDetails, hideButtons = false , translation1, translation2 }) => {
+const Card = ({
+  title,
+  text,
+  className,
+  onClickFav,
+  hideButtons = false,
+  translation1,
+  translation2,
+}) => {
   const { t } = useTranslation();
   className =
     className === ""
       ? className
       : "flex flex-col items-center justify-center py-10 px-6 bg-amber-50";
-  const handleAddToFavorites = () => {
-    if (onClick) ;
-    
-    else console.log("############Añadido a favoritos@@@@@@@@@@@@");
-  };
-  const handleDetails = () => {
-    if (onDetails) onDetails();
-      
-    else console.log("Detalles del autor");
-  };
+
 
   return (
-    
-    
     <div className={className}>
       <div className="bg-gray-50 shadow-2xl rounded-2xl p-8 max-w-4xl w-full border border-gray-200">
         <div className="prose max-w-none mb-6">
@@ -32,7 +28,7 @@ const Card = ({ title, text, className, onClick, onDetails, hideButtons = false 
             {text}
           </div>
         </div>
-        
+
         {!hideButtons && (
           <div className="flex justify-between items-center mt-3">
             <Button
@@ -53,17 +49,13 @@ const Card = ({ title, text, className, onClick, onDetails, hideButtons = false 
                     />
                   </svg>
                   <span>{t(translation1)}</span>
-
                 </span>
               }
-              onClick={onClick}
+              onClick={onClickFav}
               className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-200 flex items-center justify-center"
             />
             <div className="flex-1" style={{ minWidth: "50%" }}></div>
-            
 
-
-            
             <Button
               text={
                 <span className="flex items-center gap-2">
@@ -84,7 +76,7 @@ const Card = ({ title, text, className, onClick, onDetails, hideButtons = false 
                   <span>{t(translation2)}</span>
                 </span>
               }
-              onClick={handleDetails}
+              
               className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200 flex items-center justify-center"
             />
           </div>
