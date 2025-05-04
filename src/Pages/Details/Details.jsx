@@ -30,7 +30,16 @@ const Details = () => {
           );
         }
         const autoresParsed = await autoresRes.json();
-        setAutores(autoresParsed);
+
+        const autoresTraducibles = autoresParsed.map((autor) => ({
+          ...autor,
+          nombreAutor: `autor.${autor.id}.name`,
+          apellidoAutor: `autor.${autor.id}.lastName`,
+          biografia: `autor.${autor.id}.biography`,
+          nacionalidad: `autor.${autor.id}.nationality`,
+        }));
+
+        setAutores(autoresTraducibles);
         console.log("Autores obtenidos:", autoresParsed);
       } catch (err) {
         console.error("Error al obtener datos de los autores:", err);
@@ -47,18 +56,18 @@ const Details = () => {
     return (
       <>
         <p className="mb-3">
-          <span className="font-bold">{t("details.biography")}: </span>
-          {autor.biografia || t("details.noBiography")}
+          <span className="font-bold">{t("details.biography")}:</span>{" "}
+          {t(autor.biografia)}
         </p>
 
         <p className="mb-3">
-          <span className="font-bold">{t("details.age")}: </span>
+          <span className="font-bold">{t("details.age")}:</span>{" "}
           {autor.edad || t("details.noAge")}
         </p>
 
         <p className="mb-3">
-          <span className="font-bold">{t("details.nationality")}: </span>
-          {autor.nacionalidad || t("details.noNationality")}
+          <span className="font-bold">{t("details.nationality")}:</span>{" "}
+          {t(autor.nacionalidad)}
         </p>
       </>
     );
@@ -95,11 +104,7 @@ const Details = () => {
             {autores.map((autor) => (
               <div key={autor.id}>
                 <Card
-                  title={
-                    `${autor.nombreAutor || ""} ${
-                      autor.apellidoAutor || ""
-                    }`.trim() || "Autor desconocido"
-                  }
+                  title={`${t(autor.nombreAutor)} ${t(autor.apellidoAutor)}`}
                   text={formatearAutorTextNegrita(autor)}
                   className="mb-8 h-full"
                   hideButtons={true}

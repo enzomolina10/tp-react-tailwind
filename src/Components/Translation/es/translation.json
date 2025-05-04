@@ -22,15 +22,15 @@
     "and": " y ",
     "comeBack": "Volver al Home"
   },
-  "home":{
+  "home": {
     "empty": "No hay cuentos disponibles."
   },
-  "card":{
+  "card": {
     "author": "Detalles del autor",
     "favorite": "Favorito",
     "eliminate": "Eliminar"
   },
-  "details":{
+  "details": {
     "title": "Detalles del Autor",
     "biography": "Biografía",
     "age": "Edad",
@@ -38,5 +38,128 @@
     "noBiography": "No hay biografía disponible",
     "noAge": "No hay edad disponible",
     "noNationality": "No hay nacionalidad disponible"
+  },
+  "story": {
+    "1": {
+      "title": "La sombra que susurraba secreto",
+      "text": "En el invierno de 1995, el periodista Daniel Mercer descubrió que su sombra tenía vida propia. Cada noche, mientras revisaba documentos sobre un caso de corrupción, la silueta se movía unos segundos después que él. Al principio lo atribuyó al cansancio, hasta que una madrugada la sombra le susurró los nombres de los implicados. Al publicar la nota, Daniel se convirtió en el mejor reportero de Boston... pero desde entonces duerme con todas las luces encendidas."
+    },
+    "2": {
+      "title": "El violín de la niebla",
+      "text": "El abuelo Elias guardaba un violín que sólo tocaba cuando la niebla cubría el pueblo. Decía que las canciones atraían a 'los antiguos', seres que caminaban entre la bruma. La noche de su muerte, el violín sonó solo mientras su nieta Emma lo velaba. Al día siguiente, encontraron las huellas de siete personas alrededor de la casa... aunque sólo Emma había estado allí. Ahora, cada año en el aniversario, el violín repite la melodía desde el desván."
+    },
+    "3": {
+      "title": "El libro que escribe tu final",
+      "text": "La librería 'El último capítulo' tenía una sección prohibida: libros que narraban cómo morirían sus lectores. Claudia lo descubrió por accidente cuando un ejemplar cayó sobre sus pies. La primera página mostraba su foto y la fecha de hoy. Corrió despavorida, pero al cruzar la calle reconoció al hombre del libro: el conductor que la atropelló. Sus últimas palabras fueron '¿Dónde está el epílogo?' mientras la ambulancia se alejaba."
+    },
+    "4": {
+      "title": "El jardín de cristal",
+      "text": "El Dr. Kael inventó una máquina para grabar sueños. La probó con su hijo autista, quien por primera vez describió visiones: un jardín de cristal donde cada planta cantaba. Meses después, el niño desapareció. Kael revisó las grabaciones y vio que su hijo entraba al jardín... y alguien le entregaba unas tijeras. Ahora, cada noche, los cristales del laboratorio vibran con ecos de una canción infantil."
+    },
+    "5": {
+      "title": "Las muñecas que crecen",
+      "text": "En el pueblo de Santa Cecilia, las muñecas de porcelana crecían como niñas reales. Mariana, la dueña de la tienda, les daba té de menta para mantener su magia. Cuando una clienta robó una muñeca para revenderla, ésta envejeció décadas en un día y murió gritando. Ahora, en el escaparate vacío, los letreros dicen 'Se busca' con la foto de la mujer... que envejece un año cada hora."
+    },
+    "6": {
+      "title": "El retrato del pacto",
+      "text": "El pintor Renzo firmó un contrato: su retrato de una modelo sería exhibido por 100 años. A los 99 años y 364 días, recibió una visita. La misma mujer, sin un día de edad, reclamó el cuadro. 'El pacto termina mañana', dijo mientras se llevaba el lienzo. Al día siguiente, todos los retratos de Renzo en museos amanecieron vacíos... excepto uno donde él mismo empezaba a desaparecer."
+    },
+    "7": {
+      "title": "Los planos subterráneos de la torre Eiffel",
+      "text": "La torre Eiffel guarda un secreto: su ascensor secreto al sótano. Allí, el ingeniero DuMont escondió los planos originales, que muestran la estructura completa bajo tierra. Cuando su bisnieta Lisa los encontró, notó que los túneles coincidían con informes de personas desaparecidas. La última página tenía un croquis de su apartamento con una nota: 'No alimentes a las sombras en los escalones'."
+    },
+    "8": {
+      "title": "El faro de los mentirosos",
+      "text": "En Key West, el faro abandonado se enciende solo cuando alguien miente. Los locales lo usan para detectar infidelidades hasta que el escritor Nolan lo prueba con su manuscrito. La luz no se apagó en tres días. Al quemar las páginas, apareció una historia nueva escrita en cenizas: su propia muerte en un naufragio. Ahora el faro ilumina constantemente... y Nolan no se atreve a mirar al mar."
+    },
+    "9": {
+      "title": "El libro que lee al lector",
+      "text": "La bibliotecaria Alma encontró un libro sin título cuyo contenido cambiaba según el lector. Cuando su exnovio lo robó, las páginas se llenaron de descripciones exactas de sus secretos más oscuros. A la mañana siguiente, lo devolvió con una nota: '¿Cuánto por quemarlo?'. Alma lo guardó bajo llave, pero cada viernes aparece abierto en la mesa... mostrando siempre la última página en blanco."
+    },
+    "10": {
+      "title": "El espresso de la muerte",
+      "text": "En el café 'La Última Palabra', los clientes pueden pedir un espresso que revele cómo morirán. El barista Luca advierte: 'No bebas si ves humo negro'. Cuando la periodista Irene ignoró la advertencia, su taza mostró un edificio en llamas. Esa noche, su reportaje sobre corrupción incendió las redes. Ahora Luca guarda su taza favorita: sigue llena de café frío... y humo que nunca se disipa."
+    },
+    "11": {
+      "title": "El relojero del destino",
+      "text": "El relojero Gustav vendía cronómetros que adelantaban la hora exacta de la muerte del dueño. Cuando la joven Elsa compró uno para su padre enfermo, la aguja se detuvo en 'AHORA'. Al abrir la caja, encontró un mecanismo imposible: engranajes de hueso y un péndulo que latía. Ahora Gustav desapareció, pero en su taller los relojes marcan todos la misma hora: la de su última clienta entrando por la puerta."
+    },
+    "12": {
+      "title": "La selfie del futuro prohibido",
+      "text": "La app 'Selfie Final' prometía mostrar cómo envejecerías. Los usuarios recibían una foto de su rostro décadas después. Pero cuando el modelo Adrián la usó, su imagen mostraba un cadáver con heridas frescas. Borró la app, pero cada mañana recibe una nueva foto... cada vez más reciente. La última fue tomada hoy a las 3:47 AM. Su teléfono muestra ahora un contador regresivo: 00:12:33."
+    }
+  },
+  "autor": {
+    "1": {
+      "name": "Billie",
+      "lastName": "Torphy",
+      "biography": "Nacido en 1960 en Boston, Billie Torphy es un novelista estadounidense conocido por sus thrillers psicológicos. Su obra más aclamada, 'El Silencio de los Olmos' (1998), ganó el Premio Nacional de Literatura. Antes de dedicarse a la escritura, trabajó como periodista de investigación para el Washington Post.",
+      "nationality": "Estados Unidos"
+    },
+    "2": {
+      "name": "Ryley",
+      "lastName": "Green",
+      "biography": "Ryley Green (1927) es el decano de la literatura británica contemporánea. Veterano de la Segunda Guerra Mundial, comenzó a escribir a los 40 años. Su saga histórica 'El Tiempo entre las Sombras' (1972-1985) es considerada un clásico. Actualmente vive retirado en Escocia, donde sigue escribiendo memorias.",
+      "nationality": "Reino Unido"
+    },
+    "3": {
+      "name": "Abdiel",
+      "lastName": "Pfannerstill",
+      "biography": "De origen alemán pero criado en Argentina, Abdiel Pfannerstill (1947) fusiona el realismo mágico con la filosofía existencialista. Su novela 'Los Nombres del Viento' (1982) fue prohibida durante la dictadura militar. Profesor emérito de la Universidad de Buenos Aires, ha formado a generaciones de escritores.",
+      "nationality": "Argentina"
+    },
+    "4": {
+      "name": "Horace",
+      "lastName": "Gutmann",
+      "biography": "Joven prodigio de la ciencia ficción, Horace Gutmann publicó su primera novela ('Códice Lunar') a los 22 años. Ingeniero de Silicon Valley convertido en escritor, sus obras exploran la inteligencia artificial y la ética tecnológica. Su trilogía 'Neon Genesis' (2015-2019) inspiró la serie homónima de Netflix.",
+      "nationality": "Estados Unidos"
+    },
+    "5": {
+      "name": "Eleanor",
+      "lastName": "Whitmore",
+      "biography": "Eleanor Whitmore (1965) es una poeta y ensayista canadiense ganadora del Premio Griffin. Su colección 'Las Geografías del Tiempo' (2001) redefinió la poesía contemporánea. Directora del programa de escritura creativa en la Universidad de Toronto, es conocida por su activismo ambiental.",
+      "nationality": "Canadá"
+    },
+    "6": {
+      "name": "Dmitri",
+      "lastName": "Volkov",
+      "biography": "Nacido en Moscú en 1981, Dmitri Volkov es el enfant terrible de la literatura rusa actual. Su novela 'Acero y Vodka' (2015) provocó controversia por su crudo retrato de la juventud postsoviética. Ex-corresponsal de guerra, ahora escribe columnas satíricas para Novaya Gazeta.",
+      "nationality": "Rusia"
+    },
+    "7": {
+      "name": "Marisol",
+      "lastName": "Quintero",
+      "biography": "Pionera del feminismo literario en América Latina, Marisol Quintero (1956) saltó a la fama con 'Las Hijas de la Cenicienta' (1982). Exiliada durante los años 80, escribió sus obras más importantes en París. Actualmente preside el PEN Club Internacional en México.",
+      "nationality": "México"
+    },
+    "8": {
+      "name": "Nathaniel",
+      "lastName": "Blackwood",
+      "biography": "Maestro del gótico sureño, Nathaniel Blackwood (1942) creció en Louisiana escuchando historias de vudú. Su novela 'El Río que Nos Lleva' (1978) inspiró a una generación de escritores, incluido Stephen King. Vive en una plantación restaurada donde organiza talleres literarios.",
+      "nationality": "Estados Unidos"
+    },
+    "9": {
+      "name": "Aisha",
+      "lastName": "Diallo",
+      "biography": "Hija de inmigrantes senegaleses, Aisha Diallo (1984) fusiona tradición oral africana con ficción distópica. Su debut 'El Canto de los Desterrados' (2020) ganó el Booker Prize. Antes de escribir, fue médica en campos de refugiados, experiencia que marca su obra.",
+      "nationality": "Senegal"
+    },
+    "10": {
+      "name": "Silas",
+      "lastName": "McCoy",
+      "biography": "Silas McCoy (1950) es el cronista por excelencia del Midwest estadounidense. Ganador del Pulitzer por 'Campos de Ayer' (1995), retrata la decadencia de las pequeñas ciudades industriales. Ex minero de carbón, comenzó a escribir a los 40 años en talleres comunitarios.",
+      "nationality": "Estados Unidos"
+    },
+    "11": {
+      "name": "Yumiko",
+      "lastName": "Takahashi",
+      "biography": "Yumiko Takahashi (1978) revolucionó la literatura japonesa con su novela 'Tokio en Sombra' (2015), mezclando haikus con cyberpunk. Criada en un monasterio budista, sus obras exploran la espiritualidad en la era digital. Diseñadora de videojuegos antes de ser escritora.",
+      "nationality": "Japón"
+    },"12": {
+      "name": "Eduardo",
+      "lastName": "Montealegre",
+      "biography": "Referente del realismo sucio latinoamericano, Eduardo Montealegre (1963) retrata el narcotráfico con crudeza en obras como 'Polvo de Estrellas' (2001). Ex abogado penalista, pasó 3 años en prisión por defender a líderes sociales, experiencia que plasmó en sus memorias.",
+      "nationality": "Colombia"
+    }
   }
 }

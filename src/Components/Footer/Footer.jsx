@@ -8,7 +8,7 @@ const Footer = () => {
         <section className="flex-1 text-center px-4">
           <h2 className="text-lg font-bold">{t("footer.contact")}</h2>
           <p>Email: contacto@grupo7.com</p>
-          <p>{t("phone")}: +54 299 456 789</p>
+          <p>{t("footer.phone")}: +54 299 456 789</p>
         </section>
         <section className="flex-1 text-center px-4">
           <h2 className="text-lg font-bold">{t("footer.aboutTitle")}</h2>

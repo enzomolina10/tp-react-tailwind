@@ -37,6 +37,129 @@
     "nationality": "Nationality",
     "noBiography": "No biography available",
     "noAge": "No age available",
-    "noNationality" : "No Nationality available"
+    "noNationality": "No Nationality available"
+  },
+  "story": {
+    "1": {
+      "title": "The shadow that whispered secrets",
+      "text": "In the winter of 1995, journalist Daniel Mercer discovered his shadow had a life of its own. Every night, while reviewing documents related to a corruption case, the silhouette moved a few seconds behind him. At first, he attributed it to fatigue, until one morning the shadow whispered the names of those involved. Upon publishing the story, Daniel became Boston's top reporter... but since then, he's been sleeping with all the lights on."
+    },
+    "2": {
+      "title": "The violin of the fog",
+      "text": "Grandpa Elias kept a violin that he only played when fog covered the village. He said the songs attracted 'the ancients', beings who walked through the mist. The night of his death, the violin played alone while his granddaughter Emma kept vigil. The next day, the footprints of seven people were found around the house... although only Emma had been there. Now, every year on the anniversary, the violin repeats the melody from the attic."
+    },
+    "3": {
+      "title": "The book that writes your ending",
+      "text": "The bookstore 'The Last Chapter' had a restricted section: books that narrated how its readers would die. Claudia discovered it by accident when a copy fell at her feet. The first page showed her photo and today's date. She ran in terror, but as she crossed the street, she recognized the man in the book: the driver who hit her. His last words were 'Where's the epilogue?' as the ambulance drove away."
+    },
+    "4":{
+      "title":"The glass garden",
+      "text": "Dr. Kael invented a dream-recording machine. He tested it on his autistic son, who for the first time described visions: a crystal garden where every plant sang. Months later, the boy disappeared. Kael reviewed the recordings and saw his son enter the garden... and someone hand him a pair of scissors. Now, every night, the crystals in the lab vibrate with echoes of a nursery rhyme."
+    },
+    "5":{
+      "title": "The dolls that grow",
+      "text": "In the village of Santa Cecilia, porcelain dolls grew up like real children. Mariana, the shop owner, gave them mint tea to maintain their magic. When a customer stole one to resell it, it aged decades in a day and died screaming. Now, in the empty storefront, signs read 'Wanted' with the photo of the woman... who ages a year every hour."
+    },
+    "6":{
+      "title": "The portrait of the pact",
+      "text": "The painter Renzo signed a contract: his portrait of a model would be displayed for 100 years. At 99 years and 364 days old, he received a visitor. The same woman, not even a day older, claimed the painting. 'The pact ends tomorrow', she said as she carried the canvas away. The next day, all of Renzo's portraits in museums were empty... except for one where he himself was beginning to disappear."
+    },
+    "7":{
+      "title": "The underground plans of the Eiffel Tower",
+      "text": "The Eiffel Tower holds a secret: its secret elevator to the basement. There, engineer DuMont hid the original plans, which show the entire structure underground. When his great-granddaughter Lisa found them, she noticed that the tunnels matched reports of missing persons. The last page featured a sketch of her apartment with a note: 'Don't feed the shadows on the steps'."
+    },
+    "8":{
+      "title": "The Liars' Lighthouse",
+      "text": "In Key West, the abandoned lighthouse only lights up when someone lies. The locals use it to detect infidelity until writer Nolan tests it with his manuscript. The light didn't go out for three days. When he burned the pages, a new story appeared, written in ashes: his own death in a shipwreck. Now the lighthouse shines constantly... and Nolan doesn't dare look out to sea."
+    },
+    "9":{
+      "title": "The book that reads the reader",
+      "text": "Librarian Alma found an untitled book whose contents changed depending on the reader. When her ex-boyfriend stole it, the pages were filled with exact descriptions of her darkest secrets. The next morning, he returned it with a note: 'How much to burn it?' Alma locked it away, but every Friday it appears open on her desk... always showing the last blank page."
+    },
+    "10":{
+      "title": "The espresso of death",
+      "text": "At the café 'The Last Word', customers can order an espresso that reveals how they will die. Barista Luca warns: 'Don't drink if you see black smoke'. When journalist Irene ignored the warning, her cup showed a burning building. That night, her report on corruption set the internet ablaze. Now Luca keeps his favorite mug: still full of cold coffee... and smoke that never dissipates."
+    },
+    "11":{
+      "title": "The watchmaker of destiny",
+      "text": "Gustav the watchmaker sold chronometers that predicted the exact time of the owner's death. When young Elsa bought one for her ailing father, the hand stopped at 'NOW.' Upon opening the case, she found an impossible mechanism: bone gears and a beating pendulum. Gustav has disappeared now, but in his workshop, the clocks all tell the same time: the time of his last customer walking through the door."
+    },
+    "12":{
+      "title": "The selfie of the forbidden future",
+      "text": "The 'Final Selfie' app promised to show how you would age. Users received a photo of their face decades later. But when model Adrian used it, his image showed a corpse with fresh wounds. He deleted the app, but every morning he receives a new photo... each time more recent. The last one was taken today at 3:47 AM. His phone now displays a countdown timer: 00:12:33."
+    }
+  },
+  "autor": {
+    "1": {
+      "name": "Billie",
+      "lastName": "Torphy",
+      "biography": "Born in Boston in 1960, Billie Torphy is an American novelist known for his psychological thrillers. His most acclaimed work, 'The Silence of the Elms' (1998), won the National Book Award. Before turning to writing, he worked as an investigative journalist for the Washington Post.",
+      "nationality": "United States"
+    },
+    "2": {
+      "name": "Ryley",
+      "lastName": "Green",
+      "biography": "Ryley Green (1927) is the dean of contemporary British literature. A World War II veteran, he began writing at age 40. His historical saga 'The Time Between Shadows' (1972–1985) is considered a classic. He currently lives in retirement in Scotland, where he continues to write memoirs.",
+      "nationality": "United Kingdom"
+    },
+    "3": {
+      "name": "Abdiel",
+      "lastName": "Pfannerstill",
+      "biography": "Of German origin but raised in Argentina, Abdiel Pfannerstill (1947) fuses magical realism with existentialist philosophy. His novel 'The Names of the Wind' (1982) was banned during the military dictatorship. A professor emeritus at the University of Buenos Aires, he has trained generations of writers.",
+      "nationality": "Argentina"
+    },
+    "4": {
+      "name": "Horace",
+      "lastName": "Gutmann",
+      "biography": "A young science fiction prodigy, Horace Gutmann published his first novel ('Codex Lunar') at the age of 22. A Silicon Valley engineer turned writer, his works explore artificial intelligence and technological ethics. His 'Neon Genesis' trilogy (2015-2019) inspired the Netflix series of the same name.",
+      "nationality": "United States"
+    },
+    "5": {
+      "name": "Eleanor",
+      "lastName": "Whitmore",
+      "biography": "Eleanor Whitmore (1965) is a Canadian poet and essayist and winner of the Griffin Prize. Her collection The Geographies of Time (2001) redefined contemporary poetry. Director of the creative writing program at the University of Toronto, she is known for her environmental activism.",
+      "nationality": "Canada"
+    },
+    "6": {
+      "name": "Dmitri",
+      "lastName": "Volkov",
+      "biography": "Born in Moscow in 1981, Dmitri Volkov is the enfant terrible of contemporary Russian literature. His novel 'Steel and Vodka' (2015) sparked controversy for its stark portrayal of post-Soviet youth. A former war correspondent, he now writes satirical columns for Novaya Gazeta.",
+      "nationality": "Russia"
+    },
+    "7": {
+      "name": "Marisol",
+      "lastName": "Quintero",
+      "biography": "A pioneer of literary feminism in Latin America, Marisol Quintero (1956) rose to fame with 'Las Hijas de la Cenicienta' (Cinderella's Daughters) (1982). Exiled during the 1980s, she wrote her most important works in Paris. She currently presides over the International PEN Club in Mexico.",
+      "nationality": "Mexico"
+    },
+    "8": {
+      "name": "Nathaniel",
+      "lastName": "Blackwood",
+      "biography": "A master of Southern Gothic, Nathaniel Blackwood (1942) grew up in Louisiana listening to stories of voodoo. His novel The River That Carries Us (1978) inspired a generation of writers, including Stephen King. He lives on a restored plantation where he runs literary workshops.",
+      "nationality": "United States"
+    },
+    "9": {
+      "name": "Aisha",
+      "lastName": "Diallo",
+      "biography": "The daughter of Senegalese immigrants, Aisha Diallo (1984) fuses African oral tradition with dystopian fiction. Her debut, 'The Song of the Exiles' (2020), won the Booker Prize. Before writing, she worked as a doctor in refugee camps, an experience that informs her work.",
+      "nationality": "Senegal"
+    },
+    "10": {
+      "name": "Silas",
+      "lastName": "McCoy",
+      "biography": "Silas McCoy (1950) is the quintessential chronicler of the American Midwest. Winner of the Pulitzer Prize for 'Fields of Yesterday' (1995), he portrays the decline of small industrial towns. A former coal miner, he began writing at age 40 in community workshops.",
+      "nationality": "United States"
+    },
+    "11": {
+      "name": "Yumiko",
+      "lastName": "Takahashi",
+      "biography": "Yumiko Takahashi (1978) revolutionized Japanese literature with her novel 'Tokyo in Shadow' (2015), blending haikus with cyberpunk. Raised in a Buddhist monastery, her works explore spirituality in the digital age. She was a video game designer before becoming a writer.",
+      "nationality": "Japan"
+    },"12": {
+      "name": "Eduardo",
+      "lastName": "Montealegre",
+      "biography": "A leading figure in Latin American dirty realism, Eduardo Montealegre (1963) portrays drug trafficking with stark abandon in works such as 'Polvo de Estrellas' (2001). A former criminal lawyer, he spent three years in prison for defending social leaders, an experience he chronicled in his memoirs.",
+      "nationality": "Colombia"
+    }
   }
 }

@@ -31,7 +31,7 @@ function Home() {
 
   const cuentosFiltrados = cuentos.filter((cuento) =>
     // cuento.titulo.toLowerCase().includes(busqueda.toLowerCase())
-    quitarAcentos(cuento.titulo).includes(quitarAcentos(busqueda))
+    quitarAcentos(t(cuento.titulo)).includes(quitarAcentos(busqueda))
   );
 
   useEffect(() => {
@@ -47,7 +47,14 @@ function Home() {
         }
 
         const data = await response.json();
-        setCuentos(data);
+        
+        const cuentosTraducibles = data.map((cuento) => ({
+          ...cuento,
+          titulo: `story.${cuento.idCuento}.title`,
+          cuento: `story.${cuento.idCuento}.text`,
+        }));
+  
+        setCuentos(cuentosTraducibles);
       } catch (err) {
         setError(err.message);
         console.error("Error al obtener cuentos:", err);
@@ -55,7 +62,7 @@ function Home() {
         setLoading(false);
       }
     };
-
+  
     obtenerCuentos();
   }, []);
 

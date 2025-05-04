@@ -16,16 +16,15 @@ const Card = ({
       ? className
       : "flex flex-col items-center justify-center py-10 px-6 bg-amber-50";
 
-
   return (
     <div className={className}>
       <div className="bg-gray-50 shadow-2xl rounded-2xl p-8 max-w-4xl w-full border border-gray-200">
         <div className="prose max-w-none mb-6">
           <h2 className="text-2xl font-semibold mb-4 text-center">
-            {title || "Cuento"}
+            {typeof title === "string" ? t(title) : title}
           </h2>
           <div className="text-gray-800 whitespace-pre-line overflow-y-auto max-h-96">
-            {text}
+            {typeof text === "string" ? t(text) : text}
           </div>
         </div>
 
@@ -76,7 +75,6 @@ const Card = ({
                   <span>{t(translation2)}</span>
                 </span>
               }
-              
               className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200 flex items-center justify-center"
             />
           </div>
