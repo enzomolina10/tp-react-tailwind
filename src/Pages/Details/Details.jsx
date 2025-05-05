@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Button from "../../Components/Button/Button";
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router-dom";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import { useTranslation } from "react-i18next";
@@ -12,6 +12,7 @@ const Details = () => {
   const [autores, setAutores] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { id } = useParams();
 
   const navegaAHome = () => {
     navigate("/");
@@ -21,26 +22,49 @@ const Details = () => {
     const getAutores = async () => {
       try {
         setLoading(true);
-        const autoresRes = await fetch(
-          "https://680e8d0167c5abddd192719b.mockapi.io/api/v1/autor"
-        );
-        if (!autoresRes.ok) {
-          throw new Error(
-            `Error ${autoresRes.status}: No se pudo obtener datos de los autores`
+        if (id) {
+          const response = await fetch(
+            `https://680e8d0167c5abddd192719b.mockapi.io/api/v1/autor/${id}`
           );
+
+          if (!response.ok) {
+            throw new Error(
+              `Error ${response.status}: No se pudo obtener el autor con ID ${id}`
+            );
+          }
+
+          const autorData = await response.json();
+          const autorTraducible = {
+            ...autorData,
+            nombreAutor: `autor.${autorData.id}.name`,
+            apellidoAutor: `autor.${autorData.id}.lastName`,
+            biografia: `autor.${autorData.id}.biography`,
+            nacionalidad: `autor.${autorData.id}.nationality`,
+          };
+
+          setAutores([autorTraducible]);
+        } else {
+          const autoresRes = await fetch(
+            "https://680e8d0167c5abddd192719b.mockapi.io/api/v1/autor"
+          );
+
+          if (!autoresRes.ok) {
+            throw new Error(
+              `Error ${autoresRes.status}: No se pudo obtener datos de los autores`
+            );
+          }
+
+          const autoresParsed = await autoresRes.json();
+          const autoresTraducibles = autoresParsed.map((autor) => ({
+            ...autor,
+            nombreAutor: `autor.${autor.id}.name`,
+            apellidoAutor: `autor.${autor.id}.lastName`,
+            biografia: `autor.${autor.id}.biography`,
+            nacionalidad: `autor.${autor.id}.nationality`,
+          }));
+
+          setAutores(autoresTraducibles);
         }
-        const autoresParsed = await autoresRes.json();
-
-        const autoresTraducibles = autoresParsed.map((autor) => ({
-          ...autor,
-          nombreAutor: `autor.${autor.id}.name`,
-          apellidoAutor: `autor.${autor.id}.lastName`,
-          biografia: `autor.${autor.id}.biography`,
-          nacionalidad: `autor.${autor.id}.nationality`,
-        }));
-
-        setAutores(autoresTraducibles);
-        console.log("Autores obtenidos:", autoresParsed);
       } catch (err) {
         console.error("Error al obtener datos de los autores:", err);
         setError(err.message);
@@ -50,7 +74,7 @@ const Details = () => {
     };
 
     getAutores();
-  }, []);
+  }, [id]);
 
   const formatearAutorTextNegrita = (autor) => {
     return (
@@ -78,7 +102,9 @@ const Details = () => {
       <Header />
       <div className="flex-grow container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6 text-center">
-          {t("details.title", "Detalles del Autor")}
+          {id
+            ? t("details.title", "Detalles del Autor")
+            : t("header.authors", "Autores")}
         </h1>
 
         {loading && (
@@ -95,14 +121,19 @@ const Details = () => {
 
         {!loading && !error && autores.length === 0 && (
           <div className="text-center py-8 text-lg text-gray-600">
-            No se encontraron autores disponibles.
+            {t("details.noAuthors", "No se encontraron autores disponibles.")}
           </div>
         )}
 
         {!loading && !error && autores.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            className={`grid grid-cols-1 ${id ? "" : "md:grid-cols-2"} gap-8`}
+          >
             {autores.map((autor) => (
-              <div key={autor.id}>
+              <div
+                key={autor.id}
+                className={id ? "mx-auto max-w-2xl w-full" : ""}
+              >
                 <Card
                   title={`${t(autor.nombreAutor)} ${t(autor.apellidoAutor)}`}
                   text={formatearAutorTextNegrita(autor)}
@@ -126,5 +157,4 @@ const Details = () => {
     </div>
   );
 };
-
 export default Details;

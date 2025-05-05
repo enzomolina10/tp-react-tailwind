@@ -22,6 +22,7 @@ const Header = () => {
 
   const cambiarIdioma = (leng) => {
     i18n.changeLanguage(leng);
+    localStorage.setItem("lng", leng);
   };
 
   return (
@@ -103,20 +104,6 @@ const Header = () => {
               <span className="text-blue-700 font-bold text-base uppercase">
                 {i18n.language === "es" ? "ES" : "EN"}
               </span>
-             {/*  <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 text-blue-400 ml-2"
-                fill="none"
-                viewBox="0 0 20 20"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M7 7l3-3 3 3m0 6l-3 3-3-3"
-                />
-              </svg> */}
             </div>
           </nav>
         </div>

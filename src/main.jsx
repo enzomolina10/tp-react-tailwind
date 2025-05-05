@@ -7,8 +7,10 @@ import { initReactI18next } from "react-i18next";
 import en from "./Components/Translation/en/translation.json"
 import es from "./Components/Translation/es/translation.json"
 
+const idiomaPredeterminado = localStorage.getItem("lng") || "es";
+
 i18next.use(initReactI18next).init({
-  lng: "es",
+  lng: idiomaPredeterminado,
   interpolation: {
     escapeValue: false,
   },

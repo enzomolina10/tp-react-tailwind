@@ -48,13 +48,17 @@ function Home() {
         }
 
         const data = await response.json();
-        
+
         const cuentosTraducibles = data.map((cuento) => ({
           ...cuento,
-          titulo: `story.${cuento.idCuento}.title`,
-          cuento: `story.${cuento.idCuento}.text`,
+          titulo: cuento.titulo
+            ? `story.${cuento.idCuento}.title`
+            : cuento.titulo,
+          cuento: cuento.cuento
+            ? `story.${cuento.idCuento}.text`
+            : cuento.cuento,
         }));
-  
+
         setCuentos(cuentosTraducibles);
       } catch (err) {
         setError(err.message);
@@ -63,7 +67,7 @@ function Home() {
         setLoading(false);
       }
     };
-  
+
     obtenerCuentos();
   }, []);
 
@@ -162,12 +166,12 @@ function Home() {
           </div>
         )}
 
-      <Cards
-        cuentosFiltrados={cuentosFiltrados}
-        agregarCuentoFavorito={agregarCuentoFavorito}
-        handleDetallesAutor={handleDetallesAutor}
-      />
-            </div>
+        <Cards
+          cuentosFiltrados={cuentosFiltrados}
+          agregarCuentoFavorito={agregarCuentoFavorito}
+          handleDetallesAutor={handleDetallesAutor}
+        />
+      </div>
       <Footer />
     </div>
   );

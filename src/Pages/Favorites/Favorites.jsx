@@ -10,9 +10,9 @@ import NotificacionAlert from "../../Components/NotificacionAlert/NotificacionAl
 
 const Favorites = () => {
   const { t } = useTranslation();
-  const navegate = useNavigate();
+  const navigate = useNavigate();
   const navegaAHome = () => {
-    navegate("/");
+    navigate("/");
   };
 
   const [cuentosFavoritos, setCuentosFavoritos] = useState([]);
@@ -44,6 +44,10 @@ const Favorites = () => {
     });
   };
 
+  const handleDetallesAutor = (idAutor) => {
+    navigate(`/details/${idAutor}`);
+  };
+
   const mostrarFavoritos = () => {
     return (
       <div>
@@ -56,6 +60,7 @@ const Favorites = () => {
               translation1="card.eliminate"
               translation2="card.author"
               onClickFav={() => eliminarFavorito(cuento)}
+              onDetails={() => handleDetallesAutor(cuento.idAutor)}
             />
           ))
         ) : (
@@ -90,13 +95,13 @@ const Favorites = () => {
           />
         </div>
       </div>
-      <Footer />
       <NotificacionAlert
         visible={notificacion.visible}
         mensaje={notificacion.mensaje}
         tipo={notificacion.tipo}
         onClose={() => setNotificacion({ ...notificacion, visible: false })}
       />
+      <Footer />
     </div>
   );
 };
