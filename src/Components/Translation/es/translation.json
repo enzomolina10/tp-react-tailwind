@@ -39,6 +39,12 @@
     "noAge": "No hay edad disponible",
     "noNationality": "No hay nacionalidad disponible"
   },
+  "favorites":{
+    "cleanFavorite": "Limpiar favoritos",
+    "empty": "No hay cuentos favoritos",
+    "add": "¡Cuento agregado a favoritos!",
+    "warning": "El cuento ya estaba en favoritos."
+  },
   "story": {
     "1": {
       "title": "La sombra que susurraba secreto",

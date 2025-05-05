@@ -39,6 +39,12 @@
     "noAge": "No age available",
     "noNationality": "No Nationality available"
   },
+  "favorites":{
+    "cleanFavorite": "Clear favorites",
+    "empty": "There are no favorite stories",
+    "add": "Story added to favorites!",
+    "warning": "The story was already in favorites."
+  },
   "story": {
     "1": {
       "title": "The shadow that whispered secrets",

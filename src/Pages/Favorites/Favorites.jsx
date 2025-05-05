@@ -39,7 +39,7 @@ const Favorites = () => {
 
     setNotificacion({
       visible: true,
-      mensaje: `"${favorito.titulo}" eliminado de favoritos`,
+      mensaje: `"${t(favorito.titulo)}" eliminado de favoritos`,
       tipo: "error",
     });
   };
@@ -59,7 +59,9 @@ const Favorites = () => {
             />
           ))
         ) : (
-          <h1>NO HAY FAVORITOS</h1>
+          <h1 className="text-3xl font-bold mb-6 text-center">
+            {t("favorites.empty")}
+          </h1>
         )}
       </div>
     );
@@ -70,15 +72,23 @@ const Favorites = () => {
       <Header />
       <div className="flex-grow">
         <div className="space-y-6">{mostrarFavoritos()}</div>
-
-        <Button
-          text="Limpiar favoritos"
-          onClick={() => {
-            localStorage.removeItem("cuentosFavoritos");
-            setCuentosFavoritos([]);
-          }}
-        />
-        <Button text={t("footer.comeBack")} onClick={navegaAHome} />
+        <div className="flex justify-center mt-6">
+          <Button
+            className="bg-gray-600 hover:bg-red-700 text-white px-6 py-2 rounded-md transition duration-200"
+            text={t("favorites.cleanFavorite")}
+            onClick={() => {
+              localStorage.removeItem("cuentosFavoritos");
+              setCuentosFavoritos([]);
+            }}
+          />
+        </div>
+        <div className="flex justify-center mt-6">
+          <Button
+            text={t("footer.comeBack")}
+            onClick={navegaAHome}
+            className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 mb-6 rounded-md transition duration-200"
+          />
+        </div>
       </div>
       <Footer />
       <NotificacionAlert

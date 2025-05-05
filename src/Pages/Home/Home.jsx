@@ -117,13 +117,13 @@ function Home() {
       localStorage.setItem("cuentosFavoritos", JSON.stringify(nuevosFavoritos));
       setNotificacion({
         visible: true,
-        mensaje: "¡Cuento agregado a favoritos!",
+        mensaje: t("favorites.add"),
         tipo: "exito",
       });
     } else {
       setNotificacion({
         visible: true,
-        mensaje: "El cuento ya estaba en favoritos.",
+        mensaje: t("favorites.warning"),
         tipo: "advertencia",
       });
     }
