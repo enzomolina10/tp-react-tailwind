@@ -120,8 +120,8 @@ const Details = () => {
         )}
 
         {!loading && !error && autores.length === 0 && (
-          <div className="text-center py-8 text-lg text-gray-600">
-            {t("details.noAuthors", "No se encontraron autores disponibles.")}
+          <div className="text-center py-8 text-2xl text-red-700">
+            {t("details.noAuthors")}
           </div>
         )}
 

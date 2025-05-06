@@ -166,6 +166,18 @@ function Home() {
           </div>
         )}
 
+        {!loading &&
+          !error &&
+          cuentos.length > 0 &&
+          cuentosFiltrados.length === 0 &&
+          busqueda && (
+            <div className="text-center py-8 bg-yellow-50 border border-red-500 rounded-lg my-6">
+              <p className="text-lg text-yellow-700">
+                {t("home.notInput")}
+              </p>
+            </div>
+          )}
+        
         <Cards
           cuentosFiltrados={cuentosFiltrados}
           agregarCuentoFavorito={agregarCuentoFavorito}

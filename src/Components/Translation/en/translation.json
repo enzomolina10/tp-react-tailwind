@@ -23,7 +23,8 @@
     "comeBack": "Come back Home"
   },
   "home": {
-    "empty": "There are no stories available."
+    "empty": "There are no stories available.",
+    "notInput": "No story found"
   },
   "card": {
     "author": "Author details",
@@ -37,7 +38,8 @@
     "nationality": "Nationality",
     "noBiography": "No biography available",
     "noAge": "No age available",
-    "noNationality": "No Nationality available"
+    "noNationality": "No Nationality available",
+    "noAuthors": "No authors available."
   },
   "favorites":{
     "cleanFavorite": "Clear favorites",

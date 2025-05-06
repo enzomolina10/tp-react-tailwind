@@ -23,7 +23,8 @@
     "comeBack": "Volver al Home"
   },
   "home": {
-    "empty": "No hay cuentos disponibles."
+    "empty": "No hay cuentos disponibles.",
+    "notInput": "No se encontró el cuento"
   },
   "card": {
     "author": "Detalles del autor",
@@ -37,7 +38,8 @@
     "nationality": "Nacionalidad",
     "noBiography": "No hay biografía disponible",
     "noAge": "No hay edad disponible",
-    "noNationality": "No hay nacionalidad disponible"
+    "noNationality": "No hay nacionalidad disponible",
+    "noAuthors": "No se encontraron autores disponibles."
   },
   "favorites":{
     "cleanFavorite": "Limpiar favoritos",
