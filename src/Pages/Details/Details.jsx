@@ -138,6 +138,7 @@ const Details = () => {
                   title={`${t(autor.nombreAutor)} ${t(autor.apellidoAutor)}`}
                   text={formatearAutorTextNegrita(autor)}
                   className="mb-8 h-full"
+                  image={autor.imagen}
                   hideButtons={true}
                 />
               </div>

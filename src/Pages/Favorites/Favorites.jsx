@@ -57,6 +57,7 @@ const Favorites = () => {
               key={cuento.idCuento}
               title={cuento.titulo}
               text={cuento.cuento}
+              image={cuento.imagen}
               translation1="card.eliminate"
               translation2="card.author"
               onClickFav={() => eliminarFavorito(cuento)}
