@@ -98,7 +98,7 @@ const Details = () => {
   };
 
   return (
-    <div className="bg-amber-50 min-h-screen flex flex-col dark:bg-gradient-to-r dark:from-black dark:to-blue-900">
+    <div className="bg-gradient-to-r from-white to-blue-200 dark:bg-gradient-to-r dark:from-black dark:to-blue-900 min-h-screen flex flex-col min-h-screen">
       <Header />
       <div className="flex-grow container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6 text-center dark:text-white">
