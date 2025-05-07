@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-6">
+    <footer className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-6 dark:bg-gradient-to-r dark:from-blue-800 dark:to-blue-900">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start md:items-start space-y-6 md:space-y-0">
         <section className="flex-1 text-center px-4">
           <h2 className="text-lg font-bold">{t("footer.contact")}</h2>

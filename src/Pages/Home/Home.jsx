@@ -133,8 +133,10 @@ function Home() {
     }
   };
 
+  
+
   return (
-    <div className="bg-amber-50 min-h-screen flex flex-col">
+    <div className="bg-gradient-to-r from-white to-blue-200 dark:bg-gradient-to-r dark:from-black dark:to-blue-900 min-h-screen flex flex-col">
       <NotificacionAlert
         mensaje={notificacion.mensaje}
         tipo={notificacion.tipo}

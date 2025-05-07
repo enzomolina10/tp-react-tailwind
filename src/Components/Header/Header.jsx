@@ -28,14 +28,14 @@ const Header = () => {
   return (
     <header
       className={
-        "bg-gradient-to-r from-blue-600 to-blue-500 py-5 sticky top-0 z-50 text-white"
+        "bg-gradient-to-r from-blue-600 to-blue-500 py-5 sticky top-0 z-50 text-white dark:bg-gradient-to-r dark:from-blue-950 dark:to-blue-900"
       }
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <div
-              className="bg-white text-blue-600 rounded-full p-2 shadow-md cursor-pointer hover:bg-blue-100 transition-colors duration-200"
+              className="bg-white text-blue-600 rounded-full p-2 shadow-md cursor-pointer hover:bg-blue-100 transition-colors duration-200   "
               onClick={navegaAHome}
             >
               <svg
@@ -67,28 +67,32 @@ const Header = () => {
             <Button
               onClick={navegaAHome}
               text={<span>{t("header.home")}</span>}
-              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 hover:underline"
+              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 hover:underline dark:bg-blue-900 dark:text-blue-100 dark:border-blue-700 dark:hover:bg-blue-800 dark:hover:text-white
+"
             />
             <Button
               onClick={navegaAFavorites}
               text={<span>{t("header.favorites")}</span>}
-              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 hover:underline"
+              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 hover:underline dark:bg-blue-900 dark:text-blue-100 dark:border-blue-700 dark:hover:bg-blue-800 dark:hover:text-white
+"
             />
             <Button
               onClick={navegaADetails}
               text={<span>{t("header.authors")}</span>}
-              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 hover:underline"
+              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 hover:underline dark:bg-blue-900 dark:text-blue-100 dark:border-blue-700 dark:hover:bg-blue-800 dark:hover:text-white
+:underline"
             />
             <div
               onClick={() =>
                 cambiarIdioma(i18n.language === "es" ? "en" : "es")
               }
-              className="flex items-center cursor-pointer select-none px-4 py-2 ml-4 rounded-xl bg-white border border-blue-300 shadow-md hover:bg-blue-50 transition-colors duration-200"
+              className="flex items-center cursor-pointer select-none px-4 py-2 ml-4 rounded-xl bg-white border border-blue-300 shadow-md hover:bg-blue-50 transition-colors duration-200  dark:bg-blue-900 dark:border-blue-700 dark:hover:bg-blue-800
+"
             >
               {/* icono del mundo */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-blue-600 mr-2"
+                className="h-6 w-6 text-blue-600 mr-2 dark:text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -101,7 +105,7 @@ const Header = () => {
                 />
               </svg>
               {/* Mostrar ES o EN dinámicamente */}
-              <span className="text-blue-700 font-bold text-base uppercase">
+              <span className="text-blue-700 font-bold text-base uppercase dark:text-white">
                 {i18n.language === "es" ? "ES" : "EN"}
               </span>
             </div>

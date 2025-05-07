@@ -98,10 +98,10 @@ const Details = () => {
   };
 
   return (
-    <div className="bg-amber-50 min-h-screen flex flex-col">
+    <div className="bg-amber-50 min-h-screen flex flex-col dark:bg-gradient-to-r dark:from-black dark:to-blue-900">
       <Header />
       <div className="flex-grow container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6 text-center">
+        <h1 className="text-3xl font-bold mb-6 text-center dark:text-white">
           {id
             ? t("details.title", "Detalles del Autor")
             : t("header.authors", "Autores")}

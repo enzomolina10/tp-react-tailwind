@@ -16,11 +16,12 @@ const Card = ({
   className =
     className === ""
       ? className
-      : "flex flex-col items-center justify-center py-8 px-6 bg-amber-50";
+      : "flex flex-col items-center justify-center ";
 
   return (
     <div className={className}>
-      <div className="bg-gray-50 shadow-xl rounded-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-300 max-w-4xl w-full p-4">
+      <div className="bg-gray-50 shadow-xl rounded-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-all duration-300 max-w-4xl w-full p-4 my-8 mx-6 dark:bg-blue-900 dark:border-blue-700 ">
+
         <div className="flex flex-row gap-6">
           {/* FOTO */}
           {image && (
@@ -36,10 +37,10 @@ const Card = ({
           {/* CONTENIDO */}
           <div className="flex flex-col justify-between flex-grow">
             <div>
-              <h2 className="text-2xl font-semibold text-center border-b border-amber-300 pb-2 mb-4">
+              <h2 className="text-2xl font-semibold text-center border-b border-amber-300 pb-2 mb-4 dark:text-white">
                 {typeof title === "string" ? t(title) : title}
               </h2>
-              <div className="text-gray-700 whitespace-pre-line overflow-y-auto max-h-60 leading-relaxed px-2">
+              <div className="text-gray-700 whitespace-pre-line overflow-y-auto max-h-60 leading-relaxed px-2 dark:text-white">
                 {typeof text === "string" ? t(text) : text}
               </div>
             </div>
@@ -68,7 +69,7 @@ const Card = ({
                     </span>
                   }
                   onClick={onClickFav}
-                  className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-200"
+                  className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-200 "
                 />
   
                 {/* BOTÓN AUTOR / DETALLES */}
@@ -93,7 +94,7 @@ const Card = ({
                     </span>
                   }
                   onClick={onDetails}
-                  className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200"
+                  className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-200 dark:bg-blue-950 dark:text-blue-100 dark:border-blue-600 dark:hover:bg-blue-800 dark:hover:text-white"
                 />
               </div>
             )}

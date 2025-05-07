@@ -74,7 +74,7 @@ const Favorites = () => {
   };
 
   return (
-    <div className="bg-amber-50 min-h-screen flex flex-col">
+    <div className="bg-amber-50 min-h-screen flex flex-col dark:bg-gradient-to-r dark:from-black dark:to-blue-900">
       <Header />
       <div className="flex-grow">
         <div className="space-y-6">{mostrarFavoritos()}</div>
