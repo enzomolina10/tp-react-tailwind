@@ -79,8 +79,7 @@ const Header = () => {
             <Button
               onClick={navegaADetails}
               text={<span>{t("header.authors")}</span>}
-              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 hover:underline dark:bg-blue-900 dark:text-blue-100 dark:border-blue-700 dark:hover:bg-blue-800 dark:hover:text-white
-:underline"
+              className="group relative py-2 px-5 font-semibold text-base bg-blue-100 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-200 hover:text-blue-900 transition-colors duration-200 hover:underline dark:bg-blue-900 dark:text-blue-100 dark:border-blue-700 dark:hover:bg-blue-800 dark:hover:text-white"
             />
             <div
               onClick={() =>
