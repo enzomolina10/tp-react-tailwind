@@ -65,7 +65,7 @@ const Favorites = () => {
             />
           ))
         ) : (
-          <h1 className="text-3xl font-bold mb-6 text-center">
+          <h1 className="text-3xl font-bold mb-6 text-center text-blue-400">
             {t("favorites.empty")}
           </h1>
         )}
