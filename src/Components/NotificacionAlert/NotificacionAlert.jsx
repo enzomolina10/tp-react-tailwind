@@ -15,9 +15,10 @@ const NotificacionAlert = ({ mensaje, tipo = "info", visible, onClose }) => {
   if (!visible) return null;
 
   let color = "bg-blue-500";
-  if (tipo === "exito") color = "bg-green-400";
-  if (tipo === "error") color = "bg-red-600";
-  if (tipo === "advertencia") color = "bg-yellow-600 text-black";
+  if (tipo === "exito") color = "bg-green-200 text-green-900";
+  if (tipo === "error") color = "bg-red-200 text-red-900";
+  if (tipo === "advertencia") color = "bg-yellow-200 text-yellow-900";
+
 
   return (
     <div
