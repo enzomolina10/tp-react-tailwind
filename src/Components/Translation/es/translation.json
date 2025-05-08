@@ -6,6 +6,11 @@
     "authors": "Autores",
     "search": "Buscar cuento"
   },
+  "errorPagNotFound": {
+    "title": "Pagina no encontrada",
+    "message": "La página que buscas no existe.",
+    "backToHome": "Volver al inicio"
+  },
   "footer": {
     "contact": "Contacto",
     "phone": "Teléfono",
@@ -41,7 +46,7 @@
     "noNationality": "No hay nacionalidad disponible",
     "noAuthors": "No se encontraron autores disponibles."
   },
-  "favorites":{
+  "favorites": {
     "cleanFavorite": "Limpiar favoritos",
     "empty": "No hay cuentos favoritos",
     "add": "¡Cuento agregado a favoritos!",
@@ -163,7 +168,8 @@
       "lastName": "Takahashi",
       "biography": "Yumiko Takahashi (1978) revolucionó la literatura japonesa con su novela 'Tokio en Sombra' (2015), mezclando haikus con cyberpunk. Criada en un monasterio budista, sus obras exploran la espiritualidad en la era digital. Diseñadora de videojuegos antes de ser escritora.",
       "nationality": "Japón"
-    },"12": {
+    },
+    "12": {
       "name": "Eduardo",
       "lastName": "Montealegre",
       "biography": "Referente del realismo sucio latinoamericano, Eduardo Montealegre (1963) retrata el narcotráfico con crudeza en obras como 'Polvo de Estrellas' (2001). Ex abogado penalista, pasó 3 años en prisión por defender a líderes sociales, experiencia que plasmó en sus memorias.",
