@@ -21,9 +21,6 @@ Esta web está diseñada para funcionar tanto en línea como fuera de línea, of
 **💡 Tip:** Haz _Ctrl + Click_ (o _Cmd + Click_ en Mac) en el botón de Vercel para abrirlo en una nueva pestaña.  
 **🚀Deploy en Vercel:** [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://tp-react-tailwind-six.vercel.app/)
 
-# **📌 Aclaracion Importante**
-
-**Error 404** al recargar la pagina en Favoritos y Autores, solo sucede en Vercel, en local carga bien!
 
 ---
 
